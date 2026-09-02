@@ -9,30 +9,30 @@ using NUnit.Framework;
 namespace Ucu.Poo.Restaurant.Tests
 {
     /* Quita los siguientes comentarios para probar tu solución */
-    // [TestFixture]
-    // public class WaiterTests
-    // {
-    //     [Test]
-    //     public void Constructor_WithValidParameters_SetsProperties()
-    //     {
-    //         const string name = "John Doe";
-    //         Waiter waiter = new Waiter(name);
+    [TestFixture]
+    public class WaiterTests
+    {
+        [Test]
+        public void Constructor_WithValidParameters_SetsProperties()
+        {
+            const string name = "John Doe";
+            Waiter waiter = new Waiter(name);
 
-    //         Assert.That(waiter.Name, Is.EqualTo(name));
-    //     }
+            Assert.That(waiter.Name, Is.EqualTo(name));
+        }
 
-    //     [Test]
-    //     public void TakeOrder_WithValidParameters_TakesOrder()
-    //     {
-    //         Waiter waiter = new Waiter("Jane Doe");
-    //         Table table = new Table(1);
-    //         waiter.AssignTable(table);
-    //         Dish dish = new Dish("Salad", 5.99, true);
-    //         table.Occupy();
+        [Test]
+        public void TakeOrder_WithValidParameters_TakesOrder()
+        {
+            Waiter waiter = new Waiter("Jane Doe");
+            Table table = new Table(1);
+            waiter.AssignTable(table);
+            Dish dish = new Dish("Salad", 5.99, true);
+            table.Occupy();
 
-    //         waiter.TakeOrder(table, dish);
+            waiter.TakeOrder(table, dish);
 
-    //         Assert.That(table.HasOrders(), Is.True);
-    //     }
-    // }
+            Assert.That(table.HasOrders(), Is.True);
+        }
+    }
 }
