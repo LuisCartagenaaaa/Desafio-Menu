@@ -11,6 +11,7 @@ namespace Ucu.Poo.Restaurant.Tests
     /* Quita los siguientes comentarios para probar tu solución */
     [TestFixture]
     public class WaiterTests
+    //EasterEgg
     {
         [Test]
         public void Constructor_WithValidParameters_SetsProperties()
