@@ -15,7 +15,13 @@ namespace Ucu.Poo.Restaurant
     {
         public int Number {get; set;}
         public bool IsOccupied {get; set;}
-        public ArrayList Order {get;}
+        public ArrayList Order
+        {
+            get
+            {
+                return this.order;
+            }
+        }
         public void Occupy()
         {
             this.IsOccupied = true;
@@ -35,6 +41,12 @@ namespace Ucu.Poo.Restaurant
             this.IsOccupied = isOccupied;
         }
         private ArrayList order = new ArrayList();
+
+        public double GetTotal()
+        {
+            Order currentOrder = new Order(this.order);
+            return currentOrder.GetTotal();
+        }
 
         public bool HasOrders()
         {
